@@ -4,11 +4,13 @@ export function setHolidays(data) {
     midnight.setHours(0,0,0,0);
     let today = 1;
     let next = 2147483647000;
+    let id = 1;
 
     data.forEach(element => {
         let elementDateTime = new Date(element.date).getTime()
         if (elementDateTime >= midnight.getTime()) {
-            holidayArray[elementDateTime] = element;
+            element.id = id++;
+            holidayArray.push(element);
             if (elementDateTime < next) {
                 next = elementDateTime;
             }

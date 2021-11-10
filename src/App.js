@@ -1,5 +1,6 @@
 import React from 'react';
 import TodayHoliday from './features/TodayHoliday/TodayHoliday';
+import UpcomingHolidays from './features/UpcomingHolidays/UpcomingHolidays';
 import './App.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
           <TodayHoliday />
         </div>
       </div>
+        <UpcomingHolidays />
     </div>
   );
 }
